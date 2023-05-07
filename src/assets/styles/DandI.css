@@ -1,0 +1,28 @@
+.DandIcalculatorHome {
+  display: grid;
+  padding: 2rem;
+  margin-top: 2rem;
+  padding-left: 0;
+  gap: 1rem;
+}
+
+.emDandI {
+  border: 2px solid rgb(77, 5, 5);
+  height: fit-content;
+  color: darkblue;
+}
+
+.btnDandI {
+  height: 4rem;
+  font-size: 1rem;
+
+  background-color: rgb(13, 16, 41);
+  border-radius: 5%;
+  color: white;
+  padding: 1rem;
+}
+.btnDandI:hover {
+  /* transform: scale(1.1); */
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}

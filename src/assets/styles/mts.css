@@ -1,0 +1,71 @@
+/* common css for midpoint trapezoid and simpson */
+
+.calculatorHome {
+  display: grid;
+  grid-template-columns: 44% 42%;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.section1,
+.section2,
+.section3,
+.section4 {
+  padding: 4rem;
+  border: 2px solid rgb(0, 0, 0);
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+}
+
+.em {
+  padding: 1rem;
+  width: 10rem;
+  grid-column-start: 1;
+  height: fit-content;
+  grid-column-end: 2;
+  font-weight: 100;
+
+  color: rgb(1, 1, 52);
+}
+
+.methodText {
+  font-weight: 100;
+  height: fit-content;
+  font-size: 1.2rem;
+  width: max-content;
+
+  text-align: center;
+
+  /* background-color: rgb(255, 255, 255); */
+}
+.Eval,
+.Eval34 {
+  height: 4rem;
+  font-size: 1rem;
+  grid-column-start: 3;
+  /* grid-column-end: ; */
+  /* height: 3rem; */
+  background-color: rgb(13, 16, 41);
+  border-radius: 5%;
+  color: white;
+  padding: 1rem;
+}
+
+.Eval:hover,
+.Eval34:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.Eval34 {
+  grid-column-start: 1;
+}
+
+.input {
+  text-align: center;
+  font-size: 1.1rem;
+  width: 10rem;
+  color: rgb(1, 1, 52);
+}
