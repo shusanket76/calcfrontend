@@ -30,7 +30,7 @@ const SimpsonEvaluate = () => {
     maxDepth: 10,
   };
   const handlesubmit = async () => {
-    const url = "http://127.0.0.1:8000/simpson";
+    const url = "https://web-production-5eba.up.railway.app/simpson";
 
     const response = await axios.post(url, {
       function: latex,
@@ -41,7 +41,7 @@ const SimpsonEvaluate = () => {
     setResult(data);
   };
   const handlesubmit1 = async () => {
-    const url1 = "http://127.0.0.1:8000/simpsonFbound";
+    const url1 = "https://web-production-5eba.up.railway.app/simpsonFbound";
     const response = await axios.post(url1, {
       function: latex,
     });
@@ -50,7 +50,7 @@ const SimpsonEvaluate = () => {
     setResult1(data);
   };
   const handlesubmit2 = async () => {
-    const url1 = "http://127.0.0.1:8000/simpsonError";
+    const url1 = "https://web-production-5eba.up.railway.app/simpsonError";
     const response = await axios.post(url1, {
       function: latex,
 
@@ -62,7 +62,7 @@ const SimpsonEvaluate = () => {
     setResult2(data);
   };
   const handlesubmit3 = async () => {
-    const url1 = "http://127.0.0.1:8000/simpsonInterval";
+    const url1 = "https://web-production-5eba.up.railway.app/simpsonInterval";
     const response = await axios.post(url1, {
       function: latex,
       k: k,

@@ -20,7 +20,7 @@ const IntegrateCalculator = () => {
     maxDepth: 10,
   };
   const handleSubmit = async () => {
-    const url = "http://127.0.0.1:8000/integration";
+    const url = "https://web-production-5eba.up.railway.app/integration";
     const response = await axios.post(url, {
       function: latex,
     });
@@ -38,7 +38,7 @@ const IntegrateCalculator = () => {
           setLatex(mathField.latex());
         }}
       />
-    
+
       <button onClick={handleSubmit} className="btnDandI">
         INTEGRATE{" "}
       </button>

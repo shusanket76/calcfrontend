@@ -20,7 +20,7 @@ const DerivativeCalculator = () => {
     maxDepth: 10,
   };
   const handleSubmit = async () => {
-    const url = "http://127.0.0.1:8000/derivative";
+    const url = "https://web-production-5eba.up.railway.app/derivative";
     const response = await axios.post(url, {
       function: latex,
     });

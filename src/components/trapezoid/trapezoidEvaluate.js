@@ -31,7 +31,7 @@ const TrapezoidEvaluate = () => {
     maxDepth: 10,
   };
   const handlesubmit = async () => {
-    const url = "http://127.0.0.1:8000/trapezoid";
+    const url = "https://web-production-5eba.up.railway.app/trapezoid";
 
     const response = await axios.post(url, {
       function: latex,
@@ -41,7 +41,7 @@ const TrapezoidEvaluate = () => {
     setResult(data);
   };
   const handlesubmit1 = async () => {
-    const url1 = "http://127.0.0.1:8000/trapezoidFbound";
+    const url1 = "https://web-production-5eba.up.railway.app/trapezoidFbound";
     const response = await axios.post(url1, {
       function: latex,
     });
@@ -50,7 +50,7 @@ const TrapezoidEvaluate = () => {
     setResult1(data);
   };
   const handlesubmit2 = async () => {
-    const url1 = "http://127.0.0.1:8000/trapezoidError";
+    const url1 = "https://web-production-5eba.up.railway.app/trapezoidError";
     const response = await axios.post(url1, {
       function: latex,
 
@@ -62,7 +62,7 @@ const TrapezoidEvaluate = () => {
     setResult2(data);
   };
   const handlesubmit3 = async () => {
-    const url1 = "http://127.0.0.1:8000/trapezoidInterval";
+    const url1 = "https://web-production-5eba.up.railway.app/trapezoidInterval";
     const response = await axios.post(url1, {
       function: latex,
 

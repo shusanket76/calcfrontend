@@ -30,7 +30,7 @@ const MidPointEvaluate = () => {
     maxDepth: 10,
   };
   const handlesubmit = async () => {
-    const url = "http://127.0.0.1:8000/midpoint";
+    const url = "https://web-production-5eba.up.railway.app/midpoint";
 
     const response = await axios.post(url, {
       function: latex,
@@ -41,7 +41,7 @@ const MidPointEvaluate = () => {
     setResult(data);
   };
   const handlesubmit1 = async () => {
-    const url1 = "http://127.0.0.1:8000/midpointFbound";
+    const url1 = "https://web-production-5eba.up.railway.app/midpointFbound";
     const response = await axios.post(url1, {
       function: latex,
     });
@@ -50,7 +50,7 @@ const MidPointEvaluate = () => {
     setResult1(data);
   };
   const handlesubmit2 = async () => {
-    const url1 = "http://127.0.0.1:8000/midpointError";
+    const url1 = "https://web-production-5eba.up.railway.app/midpointError";
     const response = await axios.post(url1, {
       function: latex,
 
@@ -62,7 +62,7 @@ const MidPointEvaluate = () => {
     setResult2(data);
   };
   const handlesubmit3 = async () => {
-    const url1 = "http://127.0.0.1:8000/midpointInterval";
+    const url1 = "https://web-production-5eba.up.railway.app/midpointInterval";
     const response = await axios.post(url1, {
       function: latex,
 
