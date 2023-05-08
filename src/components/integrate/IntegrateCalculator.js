@@ -5,7 +5,7 @@ import "../../assets/styles/DandI.css";
 addStyles();
 
 const IntegrateCalculator = () => {
-  const [latex, setLatex] = React.useState("");
+  const [latex, setLatex] = React.useState("\\int_{ }^{ }\\frac{1}{1+x^2}dx");
   const [result, setResult] = React.useState("");
   const config = {
     spaceBehavesLikeTab: true,
@@ -42,6 +42,7 @@ const IntegrateCalculator = () => {
       <button onClick={handleSubmit} className="btnDandI">
         INTEGRATE{" "}
       </button>
+
       <h1>{result["msg"]}</h1>
     </div>
   );

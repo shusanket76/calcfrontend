@@ -8,7 +8,7 @@ import "../../assets/styles/mts.css";
 addStyles();
 
 const TrapezoidEvaluate = () => {
-  const [latex, setLatex] = useState("");
+  const [latex, setLatex] = useState("\\int_1^2\\frac{1}{1+x^6}dx");
 
   const [interval, setInterval] = useState();
   const [k, setK] = useState("");
