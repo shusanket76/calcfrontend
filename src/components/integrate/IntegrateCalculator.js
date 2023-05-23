@@ -7,6 +7,7 @@ addStyles();
 const IntegrateCalculator = () => {
   const [latex, setLatex] = React.useState("\\int_{ }^{ }\\frac{1}{1+x^2}dx");
   const [result, setResult] = React.useState("");
+
   const config = {
     spaceBehavesLikeTab: true,
     leftRightIntoCmdGoes: "up",

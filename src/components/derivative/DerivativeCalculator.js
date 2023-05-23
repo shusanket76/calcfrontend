@@ -5,8 +5,11 @@ import "../../assets/styles/DandI.css";
 addStyles();
 
 const DerivativeCalculator = () => {
-  const [latex, setLatex] = React.useState("\\frac{d}{dx}(sin\\left(x\\right))");
+  const [latex, setLatex] = React.useState(
+    "\\frac{d}{dx}(sin\\left(x\\right))"
+  );
   const [result, setResult] = React.useState("");
+
   const config = {
     spaceBehavesLikeTab: true,
     leftRightIntoCmdGoes: "up",
@@ -26,7 +29,6 @@ const DerivativeCalculator = () => {
     });
     const data = await response.data;
     setResult(data);
-    console.log(data);
   };
   return (
     <div className="DandIcalculatorHome">
@@ -41,9 +43,9 @@ const DerivativeCalculator = () => {
       />
 
       <button onClick={handleSubmit} className="btnDandI">
-        DERIVATIVE{" "}
+        DERIVATIVE
       </button>
-    
+
       <h1>{result["msg"]}</h1>
     </div>
   );

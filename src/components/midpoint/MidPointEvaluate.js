@@ -71,7 +71,7 @@ const MidPointEvaluate = () => {
       error: error,
     });
     const data = await response.data;
-    console.log(data);
+
     setResult3(data);
   };
   return (
