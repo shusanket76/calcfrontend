@@ -1,10 +1,13 @@
 import { addStyles, EditableMathField } from "react-mathquill";
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "../../assets/styles/DandI.css";
 addStyles();
 
 const DerivativeCalculator = () => {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   const [latex, setLatex] = React.useState(
     "\\frac{d}{dx}(sin\\left(x\\right))"
   );
@@ -23,12 +26,17 @@ const DerivativeCalculator = () => {
     maxDepth: 10,
   };
   const handleSubmit = async () => {
-    const url = "https://web-production-5eba.up.railway.app/derivative";
+    setSuccess(false);
+    setLoading(true);
+    const url = "https://web-production-025a.up.railway.app/derivative";
     const response = await axios.post(url, {
       function: latex,
     });
     const data = await response.data;
+
     setResult(data);
+    setLoading(false);
+    setSuccess(true);
   };
   return (
     <div className="DandIcalculatorHome">
@@ -46,7 +54,8 @@ const DerivativeCalculator = () => {
         DERIVATIVE
       </button>
 
-      <h1>{result["msg"]}</h1>
+      {loading && <h1>LOADING...</h1>}
+      {success && <h1>{result["msg"]}</h1>}
     </div>
   );
 };

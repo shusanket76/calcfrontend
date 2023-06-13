@@ -1,5 +1,5 @@
 import { addStyles, EditableMathField } from "react-mathquill";
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "../../assets/styles/DandI.css";
 addStyles();
@@ -7,6 +7,8 @@ addStyles();
 const IntegrateCalculator = () => {
   const [latex, setLatex] = React.useState("\\int_{ }^{ }\\frac{1}{1+x^2}dx");
   const [result, setResult] = React.useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const config = {
     spaceBehavesLikeTab: true,
@@ -21,12 +23,16 @@ const IntegrateCalculator = () => {
     maxDepth: 10,
   };
   const handleSubmit = async () => {
-    const url = "https://web-production-5eba.up.railway.app/integration";
+    setLoading(true);
+    setSuccess(false);
+    const url = "https://web-production-025a.up.railway.app/integration";
     const response = await axios.post(url, {
       function: latex,
     });
     const data = await response.data;
     setResult(data);
+    setLoading(false);
+    setSuccess(true);
   };
   return (
     <div className="DandIcalculatorHome">
@@ -43,8 +49,8 @@ const IntegrateCalculator = () => {
       <button onClick={handleSubmit} className="btnDandI">
         INTEGRATE{" "}
       </button>
-
-      <h1>{result["msg"]}</h1>
+      {loading && <h1>LOADING..</h1>}
+      {success && <h1>{result["msg"]}</h1>}
     </div>
   );
 };

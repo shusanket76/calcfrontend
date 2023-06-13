@@ -30,7 +30,7 @@ const MidPointEvaluate = () => {
     maxDepth: 10,
   };
   const handlesubmit = async () => {
-    const url = "https://web-production-5eba.up.railway.app/midpoint";
+    const url = "https://web-production-025a.up.railway.app/midpoint";
 
     const response = await axios.post(url, {
       function: latex,
@@ -41,7 +41,7 @@ const MidPointEvaluate = () => {
     setResult(data);
   };
   const handlesubmit1 = async () => {
-    const url1 = "https://web-production-5eba.up.railway.app/midpointFbound";
+    const url1 = "https://web-production-025a.up.railway.app/midpointFbound";
     const response = await axios.post(url1, {
       function: latex,
     });
@@ -50,7 +50,7 @@ const MidPointEvaluate = () => {
     setResult1(data);
   };
   const handlesubmit2 = async () => {
-    const url1 = "https://web-production-5eba.up.railway.app/midpointError";
+    const url1 = "https://web-production-025a.up.railway.app/midpointError";
     const response = await axios.post(url1, {
       function: latex,
 
@@ -62,7 +62,7 @@ const MidPointEvaluate = () => {
     setResult2(data);
   };
   const handlesubmit3 = async () => {
-    const url1 = "https://web-production-5eba.up.railway.app/midpointInterval";
+    const url1 = "https://web-production-025a.up.railway.app/midpointInterval";
     const response = await axios.post(url1, {
       function: latex,
 
